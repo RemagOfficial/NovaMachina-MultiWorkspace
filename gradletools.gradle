@@ -81,14 +81,14 @@ ext.novacore = {
     def includedNovaCore = gradle.includedBuilds.find { it.name == "NovaCore" }
     if (includedNovaCore != null) {
         println "Using local NovaCore module from includeBuild()."
-        dependencies.api "novamachina.novacore:NovaCore:${novacore_version}"
+        dependencies.api "curse.maven:novacoretempfix-421856-1427837:7454005"
     } else {
         if (findProject(':NovaCore') != null) {
             println "Using local NovaCore module."
-            dependencies.api project(':NovaCore')
+            dependencies.api "curse.maven:novacoretempfix-421856-1427837:7454005"
         } else {
             println "Using remote novacore library."
-            dependencies.api "novamachina.novacore:novacore:${novacore_version}"
+            dependencies.api "curse.maven:novacoretempfix-421856-1427837:7454005"
         }
     }
 }
